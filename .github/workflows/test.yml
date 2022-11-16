@@ -127,4 +127,4 @@ jobs:
             sudo -E apt-get clean
         fi
         echo "Free space:"
-        df -h
+        whereis workdir
