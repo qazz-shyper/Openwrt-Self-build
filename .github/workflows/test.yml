@@ -119,12 +119,5 @@ jobs:
       run: |
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        if [ "${{ env.DELETE_USELESS_FILES }}" == true ]
-        then
-            docker rmi $(docker images -q)
-            sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php
-            sudo -E apt-get -y autoremove --purge
-            sudo -E apt-get clean
-        fi
         echo "Free space:"
-        whereis workdir
+        ls
