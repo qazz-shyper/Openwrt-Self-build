@@ -132,4 +132,4 @@ jobs:
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
         local_path: './script/*'
         remote_path: '/www/wwwroot/jp-a.shyper.ga/rom/source'
-        sftpArgs: '-o ConnectTimeout=5
+        sftpArgs: '-o ConnectTimeout=5'
