@@ -124,12 +124,13 @@ jobs:
             sudo -E apt-get clean
         fi
         
-    - name: deploy file to server
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.3
-      with:
-        username: 'root'
-        server: '${{ secrets.SERVER_IP }}'
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        local_path: './script/*'
-        remote_path: '/www/wwwroot/jp-a.shyper.ga/rom/source'
-        sftpArgs: '-o ConnectTimeout=5'
+    - name: Deploy to Staging server
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        ARGS: "-rltgoDzvO"
+        SOURCE: ""
+        REMOTE_HOST: "132.226.2.213"
+        REMOTE_USER: "root"
+        TARGET: "/www/wwwroot/jp-a.shyper.ga/rom/source/"
+        EXCLUDE: ""
