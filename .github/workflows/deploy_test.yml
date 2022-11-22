@@ -125,7 +125,7 @@ jobs:
         fi
         
     - name: deploy file to server
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.3
       with:
         username: 'root'
         server: '${{ secrets.SERVER_IP }}'
