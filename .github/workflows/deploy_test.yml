@@ -1,4 +1,10 @@
-name: deploy_test
+###########################################################
+#   Description: Compile OpenWrt by GitHub Actions        #
+#   Based on: https://github.com/P3TERX/Actions-OpenWrt   #
+#   Author: Hyy2001X                                      #
+###########################################################
+
+name: test
 
 ### 以下内容请保持不变 ( 请修改下方的 [环境变量设置] )
 on:
@@ -123,14 +129,10 @@ jobs:
             sudo -E apt-get -y autoremove --purge
             sudo -E apt-get clean
         fi
-        
-    - name: Deploy to Staging server
-      uses: easingthemes/ssh-deploy@main
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        ARGS: "-rltgoDzvO"
-        SOURCE: ""
-        REMOTE_HOST: "132.226.2.213"
-        REMOTE_USER: "root"
-        TARGET: "/www/wwwroot/jp-a.shyper.ga/rom/source/"
-        EXCLUDE: ""
+
+    - name: Clone Openwrt Source Code
+      run: |
+        git clone -b $REPO_BRANCH $REPO_URL openwrt
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        cd Scripts
+        mkdir test
