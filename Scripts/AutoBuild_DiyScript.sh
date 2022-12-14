@@ -85,7 +85,7 @@ EOF
             		AddPackage git passwall-depends openwrt-passwall xiaorouji packages
 			AddPackage git passwall-luci openwrt-passwall xiaorouji luci
 			AddPackage git passwall2-luci openwrt-passwall2 xiaorouji main
-			AddPackage git other openwrt-bypass kiddin9 main
+			# AddPackage git other openwrt-bypass kiddin9 main
 		;;
 		x86_64)
 			Copy ${CustomFiles}/Depends/cpuset ${BASE_FILES}/bin
