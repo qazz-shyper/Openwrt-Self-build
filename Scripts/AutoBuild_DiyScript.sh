@@ -86,6 +86,8 @@ EOF
 			AddPackage git passwall-luci openwrt-passwall xiaorouji luci
 			AddPackage git passwall2-luci openwrt-passwall2 xiaorouji main
 			# AddPackage git other openwrt-bypass kiddin9 main
+			AddPackage svn other luci-app-bypass kiddin9 openwrt-packages
+			AddPackage svn other lua-maxminddb kiddin9 openwrt-packages
 		;;
 		x86_64)
 			Copy ${CustomFiles}/Depends/cpuset ${BASE_FILES}/bin
