@@ -1,6 +1,6 @@
 --- a/feeds/packages/net/aria2/files/aria2.init
 +++ b/feeds/packages/net/aria2/files/aria2.init
-@@ -165,7 +166,8 @@ aria2_start() {
+@@ -165,7 +165,8 @@ aria2_start() {
  
  	[ "$enabled" = "1" ] || { _info "Instance \"$section\" disabled."; return 1; }
  	[ -n "$dir" ] || { _err "Please set download dir."; return 1; }
