@@ -464,7 +464,7 @@ AddPackage() {
 		git clone -b ${REPO_BRANCH} ${PKG_URL} ${PKG_NAME} > /dev/null 2>&1
 	;;
 	svn)
-		svn checkout ${REPO_URL}/${REPO_BRANCH}/trunk/${PKG_NAME} ${PKG_NAME} > /dev/null 2>&1
+		svn checkout ${REPO_URL}/${PKG_NAME} ${PKG_NAME} > /dev/null 2>&1
 	;;
 	esac
 	if [[ -f ${PKG_NAME}/Makefile || -n $(ls -A ${PKG_NAME}) ]]
