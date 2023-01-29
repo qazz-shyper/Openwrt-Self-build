@@ -117,6 +117,7 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
+        # 添加软件源
         sudo wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | sudo apt-key add -
         sudo -E apt-add-repository 'deb https://apt.kitware.com/ubuntu/ bionic main'
         sudo -E apt-get update
