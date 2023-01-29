@@ -132,4 +132,4 @@ jobs:
             sudo -E apt-get clean
         fi
         sudo cmake --version
-        sudo locate CMakeLists.txt
+        sudo which cmake
