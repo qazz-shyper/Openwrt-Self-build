@@ -4,7 +4,7 @@
 #   Author: Hyy2001X                                      #
 ###########################################################
 
-name: test
+name: NEWIFI D2 Test
 
 ### 以下内容请保持不变 ( 请修改下方的 [环境变量设置] )
 on:
@@ -54,7 +54,7 @@ env:
 
 jobs:
   Compile:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     permissions:
       issues: write
       pull-requests: write
@@ -129,10 +129,4 @@ jobs:
             sudo -E apt-get -y autoremove --purge
             sudo -E apt-get clean
         fi
-
-    - name: Clone Openwrt Source Code
-      run: |
-        git clone -b $REPO_BRANCH $REPO_URL openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        cd Scripts
-        mkdir test
+        sudo where is CMakeLists.txt
