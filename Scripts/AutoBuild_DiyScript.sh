@@ -83,7 +83,8 @@ EOF
 		d-team_newifi-d2)
 			Copy ${CustomFiles}/${TARGET_PROFILE}_system ${BASE_FILES}/etc/config system
             		AddPackage git passwall-depends openwrt-passwall xiaorouji packages
-			AddPackage git passwall-luci openwrt-passwall xiaorouji luci
+			# AddPackage git passwall-luci openwrt-passwall xiaorouji luci
+			AddPackage git passwall-luci-reality openwrt-passwall xiaorouji luci-reality
 			AddPackage git passwall2-luci openwrt-passwall2 xiaorouji main
 			# AddPackage git other openwrt-bypass kiddin9 main
 			AddPackage svn other luci-app-bypass kiddin9/openwrt-packages/trunk
