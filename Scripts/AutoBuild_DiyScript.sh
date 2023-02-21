@@ -88,6 +88,7 @@ EOF
 			# AddPackage git other openwrt-bypass kiddin9 main
 			AddPackage svn other luci-app-bypass kiddin9/openwrt-packages/trunk
 			AddPackage svn other lua-maxminddb kiddin9/openwrt-packages/trunk
+			AddPackage svn other luci-app-npc Hyy2001X/AutoBuild-Packages/trunk
 		;;
 		x86_64)
 			Copy ${CustomFiles}/Depends/cpuset ${BASE_FILES}/bin
