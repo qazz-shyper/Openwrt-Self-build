@@ -159,6 +159,8 @@ CONFIG_PACKAGE_luci-app-openclash=y
 
 # docker
 CONFIG_PACKAGE_luci-app-docker=y
+CONFIG_PACKAGE_luci-lib-docker=y
+CONFIG_PACKAGE_luci-lib-jsonc=y
 CONFIG_PACKAGE_luci-app-dockerman=y
 # nps
 CONFIG_PACKAGE_luci-app-nps=y
