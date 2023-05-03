@@ -48,6 +48,12 @@ CONFIG_PACKAGE_usbutils=y
 CONFIG_PACKAGE_luci-app-samba=y
 CONFIG_PACKAGE_luci-app-vsftpd=y
 
+#lighttpd
+CONFIG_PACKAGE_lighttpd=y
+CONFIG_PACKAGE_lighttpd-mod-webdav 
+CONFIG_PACKAGE_lighttpd-mod-auth 
+CONFIG_PACKAGE_lighttpd-mod-authn_file
+
 # LUCI Appliciations
 CONFIG_PACKAGE_luci-app-accesscontrol=y
 CONFIG_PACKAGE_luci-app-argon-config=y
