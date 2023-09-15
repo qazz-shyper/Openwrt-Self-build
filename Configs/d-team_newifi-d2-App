@@ -50,9 +50,9 @@ CONFIG_PACKAGE_luci-app-vsftpd=y
 
 #lighttpd
 CONFIG_PACKAGE_lighttpd=y
-CONFIG_PACKAGE_lighttpd-mod-webdav 
-CONFIG_PACKAGE_lighttpd-mod-auth 
-CONFIG_PACKAGE_lighttpd-mod-authn_file
+CONFIG_PACKAGE_lighttpd-mod-webdav=y 
+CONFIG_PACKAGE_lighttpd-mod-auth=y
+CONFIG_PACKAGE_lighttpd-mod-authn_file=y
 
 # LUCI Appliciations
 CONFIG_PACKAGE_luci-app-accesscontrol=y
