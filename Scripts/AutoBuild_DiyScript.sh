@@ -82,26 +82,33 @@ EOF
 		case "${TARGET_PROFILE}" in
 		d-team_newifi-d2)
 			Copy ${CustomFiles}/${TARGET_PROFILE}_system ${BASE_FILES}/etc/config system
-            		AddPackage git passwall-depends openwrt-passwall xiaorouji packages
-			AddPackage git passwall-luci openwrt-passwall xiaorouji luci
-			AddPackage git passwall2-luci openwrt-passwall2 xiaorouji main
+            		# AddPackage git passwall-depends openwrt-passwall xiaorouji packages
+			# AddPackage git passwall-luci openwrt-passwall xiaorouji luci
+			# AddPackage git passwall2-luci openwrt-passwall2 xiaorouji main
 			# AddPackage git other openwrt-bypass kiddin9 main
+   			AddPackage git passwall_packages openwrt-passwall-packages xiaorouji main
+      			AddPackage git passwall openwrt-passwall xiaorouji main
+	 		AddPackage git passwall2 openwrt-passwall2 xiaorouji main
 			AddPackage svn other luci-app-bypass kiddin9/openwrt-packages/trunk
 			AddPackage svn other lua-maxminddb kiddin9/openwrt-packages/trunk
 			AddPackage svn other luci-app-npc Hyy2001X/AutoBuild-Packages/trunk
 		;;
 		x86_64)
 			Copy ${CustomFiles}/Depends/cpuset ${BASE_FILES}/bin
-			AddPackage git passwall-depends openwrt-passwall xiaorouji packages
-			AddPackage git passwall-luci openwrt-passwall xiaorouji luci
-			rm -rf packages/lean/autocore
+			# AddPackage git passwall-depends openwrt-passwall xiaorouji packages
+			# AddPackage git passwall-luci openwrt-passwall xiaorouji luci
+			AddPackage git passwall_packages openwrt-passwall-packages xiaorouji main
+      			AddPackage git passwall openwrt-passwall xiaorouji main
+   			rm -rf packages/lean/autocore
 			AddPackage git lean autocore-modify Hyy2001X master
 			sed -i -- 's:/bin/ash:'/bin/bash':g' ${BASE_FILES}/etc/passwd
 			# sed -i "s?6.0?5.19?g" ${WORK}/target/linux/x86/Makefile
 		;;
 		xiaomi_redmi-router-ax6s)
-			AddPackage git passwall-depends openwrt-passwall xiaorouji packages
-			AddPackage git passwall-luci openwrt-passwall xiaorouji luci
+     			AddPackage git passwall_packages openwrt-passwall-packages xiaorouji main
+      			AddPackage git passwall openwrt-passwall xiaorouji main
+			# AddPackage git passwall-depends openwrt-passwall xiaorouji packages
+			# AddPackage git passwall-luci openwrt-passwall xiaorouji luci
 		;;
 		esac
 	;;
