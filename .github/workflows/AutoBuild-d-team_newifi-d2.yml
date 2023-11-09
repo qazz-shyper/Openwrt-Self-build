@@ -16,7 +16,7 @@ on:
         default: ''
       Tempoary_CONFIG:
         description: '配置文件 [可选]'
-        default: ''
+        default: 'd-team_newifi-d2'
       Tempoary_FLAG:
         description: '固件标签 [可选]'
         default: ''
