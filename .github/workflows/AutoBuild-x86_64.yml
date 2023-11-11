@@ -157,6 +157,8 @@ jobs:
         sudo -E apt -y autoremove --purge
         sudo -E apt clean
         sudo timedatectl set-timezone "Asia/Shanghai"
+        echo "Free space:"
+        df -h
 
     - name: Clone Openwrt Source Code
       run: |
@@ -202,7 +204,8 @@ jobs:
         ./scripts/feeds install -a
         make defconfig
         make download -j8
-
+        echo "Free space:"
+        df -h
     - name: Build OpenWrt
       id: compile
       run: |
